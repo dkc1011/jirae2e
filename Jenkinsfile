@@ -33,7 +33,7 @@ pipeline {
               git add .
               git commit -m "msg"
               git remote set-url origin https://jimmyrabbit88:safehouse30011988@github.com/jimmyrabbit88/features
-              git push origin ${bpmnName}
+              git push -u origin ${bpmnName}
               """
           }
       }
