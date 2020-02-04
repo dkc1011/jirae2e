@@ -3,6 +3,12 @@ def bpmnName = "new_bpmn"
 pipeline {
    agent any
 
+    triggers {
+      gitlab(
+        triggerOnPush: true,
+        triggerOnMergeRequest: true
+    }
+
    stages {
       stage('Cloning Git') {
         steps {
