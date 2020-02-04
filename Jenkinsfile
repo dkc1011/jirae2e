@@ -7,6 +7,7 @@ pipeline {
       gitlab(
         triggerOnPush: true,
         triggerOnMergeRequest: true
+        )
     }
 
    stages {
