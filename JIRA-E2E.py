@@ -81,7 +81,7 @@ dataJIRA = get_api_response() #converts text to JSON
 if dataJIRA["total"] != 0:
 
     for issue in dataJIRA['issues']:
-        if issue['fields']['issuetype']['id'] == '3':
+        if issue['fields']['issuetype']['name'] == 'Task':
             dataJIRA_issues = issue
 
     dataJIRA_fields = dataJIRA_issues['fields']
