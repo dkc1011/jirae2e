@@ -53,7 +53,6 @@ def file_creater():
 
 
 dataJIRA = get_api_response() #converts text to JSON
-
 dataJIRA_feature = dataJIRA['fields']['summary'] #gets feature title
 
 dataJIRA_subtasks = dataJIRA['fields']['subtasks'] #get list of scenarios
