@@ -77,6 +77,7 @@ def feature_id_generator():
 
 
 dataJIRA = get_api_response() #converts text to JSON
+
 if dataJIRA["total"] != 0:
 
     for issue in dataJIRA['issues']:
@@ -90,6 +91,7 @@ if dataJIRA["total"] != 0:
     #print(dataJIRA_subtasks)
 
     dataJIRA_subtasks_description = "" #create empty string to hold scenarios
+
 
     for task in dataJIRA_subtasks: #for every scenario in a feature
         dataJIRA_subtasks_description += retrieve_scenario_text()
