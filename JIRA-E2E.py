@@ -4,14 +4,14 @@ import requests
 import json
 import sys
 # issue_id = "EEJ-1"  # test placeholder
-issue_name = "new_bpmn"
+issue_name = "New JIRA Created from Jenkins."
 # issue_id = sys.argv[1] #works with argument passed in
 # issue_name = sys.argv[1] #works with argument passed in
-url_name = "http://localhost:8080/rest/api/2/search?jql=summary~"  # must get JIRA address from jenkins?
-url_id = "http://localhost:8080/rest/api/2/issue/"
+url_name = "http://localhost:8090/rest/api/2/search?jql=summary~"  # must get JIRA address from jenkins?
+url_id = "http://localhost:8090/rest/api/2/issue/"
 save_path = ""
 headers = {
-        'Authorization': 'Basic amFzb25kb3dsaW5nODg6SXJpc2hwcmlkZTE='  # must have proper authentication? OAUTH
+        'Authorization': 'Basic ZGtjMTAxMTphZG1pbg=='  # must have proper authentication? OAUTH
     }
 
 
