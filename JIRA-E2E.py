@@ -4,7 +4,7 @@ import requests
 import json
 import sys
 # issue_id = "EEJ-1"  # test placeholder
-issue_name = "New JIRA Created from Jenkins."
+issue_name = "JiraIssue"
 # issue_id = sys.argv[1] #works with argument passed in
 # issue_name = sys.argv[1] #works with argument passed in
 url_name = "http://localhost:8090/rest/api/2/search?jql=summary~"  # must get JIRA address from jenkins?
