@@ -21,6 +21,22 @@ Scenario: "Hello World" is displayed when the button is clicked
         Then the "Text" input displays "Hello World"
 
 </bpmn:documentation>
+<bpmn:documentation>Feature: Hello Worldsdsd
+
+
+
+Scenario: Hello World button loads
+    Given the "Hello World" screen has loaded
+    When the input "Text" is displayed
+    Then the "Hello World" button is displayed
+
+
+Scenario: "Hello World" is displayed when the button is clicked
+        Given the button "Print" is visible
+        When I click the button "Print"
+        Then the "Text" input displays "Hello World"
+
+</bpmn:documentation>
       <bpmn:incoming>SequenceFlow_12ke3i9</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_078ct4i</bpmn:outgoing>
     </bpmn:task>
