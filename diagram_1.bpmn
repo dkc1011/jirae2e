@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0r91awr" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.6.0">
+  <bpmn:process id="Process_0exzmlu" name="Hello World" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_12ke3i9</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Task_02jaibw" name="Hello World Screen">
+      <bpmn:documentation>Feature: Hello World
+
+
+
+Scenario: Hello World button loads
+    Given the "Hello World" screen has loaded
+    When the input "Text" is displayed
+    Then the "Hello World" button is displayed
+
+
+Scenario: "Hello World" is displayed when the button is clicked
+        Given the button "Print" is visible
+        When I click the button "Print"
+        Then the "Text" input displays "Hello World"
+
+</bpmn:documentation>
+      <bpmn:incoming>SequenceFlow_12ke3i9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_078ct4i</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="SequenceFlow_12ke3i9" sourceRef="StartEvent_1" targetRef="Task_02jaibw" />
+    <bpmn:endEvent id="EndEvent_148qneb">
+      <bpmn:incoming>SequenceFlow_078ct4i</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_078ct4i" sourceRef="Task_02jaibw" targetRef="EndEvent_148qneb" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0exzmlu">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_02jaibw_di" bpmnElement="Task_02jaibw">
+        <dc:Bounds x="410" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_12ke3i9_di" bpmnElement="SequenceFlow_12ke3i9">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="410" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_148qneb_di" bpmnElement="EndEvent_148qneb">
+        <dc:Bounds x="662" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_078ct4i_di" bpmnElement="SequenceFlow_078ct4i">
+        <di:waypoint x="510" y="117" />
+        <di:waypoint x="662" y="117" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
